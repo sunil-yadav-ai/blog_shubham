@@ -6,8 +6,117 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-inverse-surface: 33 49 69;
+  --color-on-secondary-container: 92 100 122;
+  --color-outline-variant: 195 198 215;
+  --color-on-primary-fixed-variant: 0 62 168;
+  --color-on-tertiary-fixed: 0 32 28;
+  --color-on-error-container: 147 0 10;
+  --color-surface-container: 229 238 255;
+  --color-surface-container-lowest: 255 255 255;
+  --color-surface-container-low: 239 244 255;
+  --color-background: 248 249 255;
+  --color-surface-bright: 248 249 255;
+  --color-tertiary-fixed-dim: 79 219 200;
+  --color-on-secondary: 255 255 255;
+  --color-tertiary: 0 96 86;
+  --color-surface-container-high: 220 233 255;
+  --color-surface-container-highest: 211 228 254;
+  --color-tertiary-container: 0 123 110;
+  --color-surface-dim: 203 219 245;
+  --color-on-primary: 255 255 255;
+  --color-on-surface-variant: 67 70 85;
+  --color-primary-fixed: 219 225 255;
+  --color-primary-container: 37 99 235;
+  --color-secondary-container: 218 226 253;
+  --color-on-tertiary-container: 177 255 241;
+  --color-secondary-fixed: 218 226 253;
+  --color-surface-variant: 211 228 254;
+  --color-primary: 0 74 198;
+  --color-on-primary-container: 238 239 255;
+  --color-secondary-fixed-dim: 190 198 224;
+  --color-on-surface: 11 28 48;
+  --color-secondary: 86 94 116;
+  --color-on-background: 11 28 48;
+  --color-primary-fixed-dim: 180 197 255;
+  --color-on-error: 255 255 255;
+  --color-error-container: 255 218 214;
+  --color-inverse-primary: 180 197 255;
+  --color-error: 186 26 26;
+  --color-outline: 115 118 134;
+  --color-on-tertiary: 255 255 255;
+  --color-surface: 248 249 255;
+  --color-inverse-on-surface: 234 241 255;
+  --color-on-secondary-fixed: 19 27 46;
+  --color-surface-tint: 0 83 219;
+  --color-tertiary-fixed: 113 248 228;
+  --color-on-tertiary-fixed-variant: 0 80 72;
+  --color-on-primary-fixed: 0 23 75;
+  --color-on-secondary-fixed-variant: 63 70 92;
+  --surface-elevated: 248, 249, 255;
+}
+
+.dark {
+  --color-inverse-surface: 33 49 69;
+  --color-on-secondary-container: 188 197 219;
+  --color-outline-variant: 70 76 94;
+  --color-on-primary-fixed-variant: 180 197 255;
+  --color-on-tertiary-fixed: 113 248 228;
+  --color-on-error-container: 255 180 172;
+  --color-surface-container: 24 33 49;
+  --color-surface-container-lowest: 7 12 21;
+  --color-surface-container-low: 18 27 41;
+  --color-background: 7 12 21;
+  --color-surface-bright: 18 27 41;
+  --color-tertiary-fixed-dim: 79 219 200;
+  --color-on-secondary: 255 255 255;
+  --color-tertiary: 113 248 228;
+  --color-surface-container-high: 31 44 63;
+  --color-surface-container-highest: 39 55 76;
+  --color-tertiary-container: 0 123 110;
+  --color-surface-dim: 13 19 31;
+  --color-on-primary: 255 255 255;
+  --color-on-surface-variant: 199 204 220;
+  --color-primary-fixed: 219 225 255;
+  --color-primary-container: 37 99 235;
+  --color-secondary-container: 86 94 116;
+  --color-on-tertiary-container: 177 255 241;
+  --color-secondary-fixed: 66 74 95;
+  --color-surface-variant: 26 37 53;
+  --color-primary: 115 160 255;
+  --color-on-primary-container: 238 239 255;
+  --color-secondary-fixed-dim: 86 94 116;
+  --color-on-surface: 232 240 255;
+  --color-secondary: 174 181 201;
+  --color-on-background: 232 240 255;
+  --color-primary-fixed-dim: 180 197 255;
+  --color-on-error: 255 255 255;
+  --color-error-container: 93 25 24;
+  --color-inverse-primary: 0 74 198;
+  --color-error: 255 180 172;
+  --color-outline: 150 157 176;
+  --color-on-tertiary: 0 32 28;
+  --color-surface: 7 12 21;
+  --color-inverse-on-surface: 11 28 48;
+  --color-on-secondary-fixed: 19 27 46;
+  --color-surface-tint: 115 160 255;
+  --color-tertiary-fixed: 0 96 86;
+  --color-on-tertiary-fixed-variant: 177 255 241;
+  --color-on-primary-fixed: 0 23 75;
+  --color-on-secondary-fixed-variant: 218 226 253;
+  --surface-elevated: 18, 27, 41;
+}
+
 body {
   font-family: 'Inter', sans-serif;
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-on-surface));
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 .bento-card {
